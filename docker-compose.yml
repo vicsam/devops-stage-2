@@ -46,7 +46,7 @@ services:
     image: postgres:16
     environment:
       POSTGRES_USER: app
-      POSTGRES_PASSWORD: your_password
+      POSTGRES_PASSWORD: changethis123
       POSTGRES_DB: app
     volumes:
       - pgdata:/var/lib/postgresql/data
@@ -56,7 +56,7 @@ services:
   adminer:
     image: adminer
     ports:
-      - "8080:8080"
+      - "8081:8080"
     networks:
       - web
 
