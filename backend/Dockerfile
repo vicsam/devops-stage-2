@@ -5,11 +5,13 @@ FROM python:3.8-slim
 WORKDIR /app
 
 
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir uvicorn==0.15.0 fastapi==0.68.2
 
 
 COPY . .
+
+
+RUN chmod +x /usr/local/bin/uvicorn
 
 
 EXPOSE 8000
