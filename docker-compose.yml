@@ -39,6 +39,8 @@ services:
       - "traefik.http.services.backend.loadbalancer.server.port=8000"
       - "traefik.http.routers.backend.entrypoints=web"
       - "traefik.http.routers.backend.tls.certresolver=myresolver"
+    ports:
+      - "8000:8000"
     networks:
       - web
 
